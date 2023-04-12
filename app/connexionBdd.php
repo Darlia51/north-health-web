@@ -1,7 +1,7 @@
 <?php
 	$dbhost = $_ENV['STACKHERO_MYSQL_HOST'];
 	$dbuser = $_ENV['STACKHERO_MYSQL_USER'];
-	$dbpass = $_ENV['STACKHERO_MYSQL_PASSWORD'];
+	$dbpass = $_ENV['STACKHERO_MYSQL_ROOT_PASSWORD'];
 	$dbname = $_ENV['STACKHERO_MYSQL_DATABASE'];
 
 	
