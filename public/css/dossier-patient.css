@@ -1,0 +1,172 @@
+body h1{
+	color:#4f6b6b;
+	text-align:center;
+	padding: 3%;
+}
+
+/*MASQUER LES ONGLETS 2 ET 3 EN ARRIVANT SUR LE DOSSIER PATIENT*/
+#fenetre-med,#exam-consult{
+	display: none;
+}
+
+/* ENCADRÉ TAB BAR */
+.tab {
+	overflow: hidden;
+	border: 1px solid #ccc;
+	background-color: #f1f1f1;
+	height:38px;
+	width:657px;
+	display:flex;
+	align-items:center;
+}
+
+.tab button {
+	background-color: inherit;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 14px 16px;
+	transition: 0.3s;
+	font-size: 17px;
+}
+
+.tab button:hover {
+	background-color: #ddd;
+}
+
+.tab button.active {
+	background-color: #ffffff;
+}
+
+/* POUR LES 2 ONGLETS */
+
+input[type=password]{
+	width: 60%;
+	padding: 5px;
+}
+
+input[type="submit"] {
+	background-color: #94c1ba;
+	color: white;
+	padding: 5px 10px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: 0.7s;
+}
+
+input[type="submit"]:hover {
+	background-color: #4f6b6b;
+}
+
+
+/* ONGLET PERSO */
+
+.form-infos-persos label {
+	display: block;
+	margin-bottom: 5px;
+	font-weight: 500;
+	width:60%;
+}
+
+.form-infos-persos{
+	display: grid; 
+	grid-template-columns: 1fr 1fr 1fr; 
+	border: 1px solid black;
+	padding-top:30px;
+}
+
+.boutons-infos-perso{
+	grid-column:3/3;
+	margin-right:20px;
+	margin-bottom:20px;
+	text-align:right;
+}
+
+.colonne-infos-persos{
+	display:flex;
+	flex-wrap: wrap;
+  justify-content: center;
+	align-content:flex-start;
+}
+
+.form-infos-persos input[type="text"], .form-infos-persos input[type="tel"] {
+	width: 60%;
+	padding: 5px;
+	margin-bottom: 28px;
+}
+
+/* ONGLET MEDICAL */
+
+.form-infos-medic label {
+	display: block;
+	margin-bottom: 5px;
+	font-weight: 500;
+	width:68%;
+}
+
+.form-infos-medic{
+	display: grid; 
+	grid-template-columns: 1fr 1fr 1fr; 
+	border: 1px solid black;
+	padding-top:30px;
+}
+
+.boutons-infos-med{
+	grid-column:3/3;
+	grid-row:2;
+	margin-right:20px;
+	margin-bottom:20px;
+	text-align:right;
+}
+
+.infos-medic{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding-bottom:15px;
+}
+
+.form-infos-medic [type="text"]{
+	width: 68%;
+	padding: 5px;
+	margin-bottom: 28px;
+}
+
+/* TABLEAU EXAMEN */
+.table {
+	border-collapse: collapse;
+	width: 100%;
+	border-bottom: 1px solid black;
+}
+
+.table th, .table td {
+	text-align: left;
+	padding: 8px;
+	border-right:1px solid black;
+}
+
+.table tr:nth-child(even){background-color: #eeeeeeb5}
+
+.table th {
+	color: rgb(0, 0, 0);
+}
+
+.table thead{
+	background-color: #eeeeeeb5;
+	border-top : 1px solid black;
+	border-left : 1px solid black;
+	border-right: 1px solid black;
+}
+
+tbody > tr{
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+}
+
+
+
+.tab-bar-et-contenus{
+	width:70%;
+	margin:auto;
+}

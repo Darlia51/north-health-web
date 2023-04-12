@@ -1,0 +1,25 @@
+nav{
+	background-color: #94c1ba;
+	height:8vh;
+}
+
+.logo{
+	width:20em;
+	position:fixed;
+	top:10px;
+}
+
+.nav-item{
+	padding-left:10px
+}
+
+li .nav-item{
+	font-size:16px;
+}
+
+li .nav-link{
+	color:white;
+	transition: 0.5s;
+	font-weight:500;
+}
+

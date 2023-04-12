@@ -1,0 +1,185 @@
+body h1{
+	color:#4f6b6b;
+	text-align:center;
+	padding: 3%;
+}
+
+
+/* NUMEROTATION */
+
+.numerotations-etapes h2{
+	font-size:24px;
+	color:#4f6b6b;
+}
+
+.numerotations-etapes{
+	display:flex;
+	justify-content:space-evenly;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-bottom: 10px;
+}
+
+.numerotation-etape{
+	text-align: center;
+}
+
+.numerotations-etapes svg{
+	width: 28px;
+	height: 28px;
+	color:#4f6b6b;
+}
+
+a button, button{
+	background-color: #94c1ba;
+	color: white;
+	padding: 5px 10px;
+	border: none;
+	cursor: pointer;
+	transition: 0.7s;
+}
+
+a button:hover, button:hover {
+	background-color: #4f6b6b;
+}
+
+
+/*FORMULAIRE RADIO RDV*/
+
+.form-rdv-radio, .form-rdv-checkbox{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	justify-items:center;
+	row-gap: 20px;
+	padding-top:10px;
+	width:70%;
+	margin:auto;
+}
+
+.form-rdv-radio label {
+	display: flex;
+	align-items: center;
+	justify-content:flex-start;
+	font-weight:500;
+	width:auto;
+}
+
+.h3-prise-rdv{
+	font-size:20px;
+	text-align:center;
+	padding-top:5px;
+	padding-bottom:10px;
+}
+
+.groupe-interventions{
+	margin-top:40px;
+}
+
+.radio-etape1{
+	display: flex;
+  align-items: center;
+}
+
+/*(2) ETABLISSEMENT */ 
+
+div.groupe{
+  row-gap: 60px;
+  font-weight: 500;
+}
+
+.form-etape-2{
+	font-weight: 500;
+	display:flex;
+}
+
+input[type="radio"] {
+  margin-right: 10px;
+}
+
+.form-etape-2 label{
+	padding-bottom:10px;
+}
+
+.form-ville, .form-etablissement, .form-professionnel{
+	width:230px;
+}
+
+.margin-ville{
+	margin-top:30px;
+}
+
+/*(3) DATE HEURE */
+
+.groupe-rdv3{
+	margin-top:40px;
+}
+
+.groupe-rdv3 h3{
+	font-size: 20px;
+}
+
+.form-rdv-3{
+	display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+div.rdv3{
+	display: flex;
+  flex-direction: column;
+}
+
+#appointmentHour{
+	width:250px;
+}
+
+
+.date, #appointmentDate{
+	width:195px;
+}
+
+.label-etape3{
+	font-weight:500;
+}
+
+/*(4) INFOS COMP */
+
+.form-rdv-checkbox label{
+	font-weight:500;
+	padding-top:10px;
+}
+
+.form-rdv-checkbox input{
+	margin-right:6px;
+}
+
+.groupe-infosComp4bis{
+	margin-top:40px;
+}
+
+.checkbox-etape4{
+	display: flex;
+
+}
+
+div.checkbox-etape4 label{
+	width:auto;
+	margin:0;
+	padding:0;
+}
+
+/* FOOTER */
+
+a.rdv, button.rdv{
+	position: fixed;
+}
+
+a.gauche, button.gauche{
+	left:80px;
+	bottom:60px;
+}
+
+a.droit, button.droit{
+	right:80px;
+	bottom:60px;
+}
