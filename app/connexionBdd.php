@@ -1,8 +1,8 @@
 <?php
-	$dbhost = $_ENV['STACKHERO_MYSQL_HOST'];
-	$dbuser = $_ENV['STACKHERO_MYSQL_USER'];
-	$dbpass = $_ENV['STACKHERO_MYSQL_ROOT_PASSWORD'];
-	$dbname = $_ENV['STACKHERO_MYSQL_DATABASE'];
+	$dbhost = $_ENV['CLEARDB_DATABASE_HOST'];
+	$dbuser = $_ENV['CLEARDB_DATABASE_USER'];
+	$dbpass = $_ENV['CLEARDB_DATABASE_PASSWORD'];
+	$dbname = $_ENV['DATABASE_NAME'];
 
 	
 	$mysqli = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname) or die(mysqli_error());
