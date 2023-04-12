@@ -1,8 +1,8 @@
 <?php
-	$dbhost = getenv('STACKHERO_MYSQL_HOST');
+	$dbhost = parse_url(getenv('STACKHERO_MYSQL_HOST'))['host'];
 	$dbuser = getenv('STACKHERO_MYSQL_USER');
 	$dbpass = getenv('STACKHERO_MYSQL_PASSWORD');
-	$db = getenv('STACKHERO_MYSQL_USER');
-
-	$mysqli = mysqli_connect($dbhost, $dbuser, $dbpass , $db) or die($mysqli);
+	$dbname = getenv('STACKHERO_MYSQL_DATABASE');
+	
+	$mysqli = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname) or die(mysqli_error());
 ?>
