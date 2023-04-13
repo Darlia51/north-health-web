@@ -1,9 +1,9 @@
 <?php
 
-$hostname = "dd0tzw.stackhero-network.com";
-$user = "root";
-$password = "QrfQHDT1KLY79ytGovmtg5SXlQ6vicuc";
-$database ="north-health-bdd";
+$hostname = parse_url(getenv('STACKHERO_MYSQL_HOST'));
+$user = parse_url(getenv('STACKHERO_MYSQL_USER'));
+$password = parse_url(getenv('STACKHERO_MYSQL_PASSWORD'));
+$database = parse_url(getenv('STACKHERO_MYSQL_DATABASE'));
 
 // Configuration SSL/TLS
 $sslOptions = array(
