@@ -16,7 +16,7 @@ $sslOptions = array(
 
 // Connexion à la base de données avec SSL/TLS
 $conn = mysqli_init();
-mysqli_ssl_set($conn, NULL, NULL, NULL, NULL, $sslOptions);
+mysqli_ssl_set($conn, NULL, NULL, NULL, NULL, "AES256-SHA256", $sslOptions);
 mysqli_real_connect($conn, $hostname, $user, $password, $database, 3306, NULL, MYSQLI_CLIENT_SSL);
 
 // Vérification de la connexion
