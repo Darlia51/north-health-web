@@ -84,7 +84,7 @@
 					include("../../app/connexionBdd.php");
 
 					$sql = "SELECT * FROM ConsultationType";
-					$result = mysqli_query($mysqli, $sql);
+					$result = mysqli_query($conn, $sql);
 					// echo des label et input
 					while ($row = mysqli_fetch_array($result)) {
 							echo 

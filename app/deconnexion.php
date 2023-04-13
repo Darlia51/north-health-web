@@ -7,5 +7,5 @@ $_SESSION = array();
 session_destroy();
 
 // Fermeture de la connexion à la base de données
-mysqli_close($mysqli);
+mysqli_close($conn);
 ?>

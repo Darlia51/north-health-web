@@ -6,7 +6,7 @@ if (isset($_POST['cityId']) && !empty($_POST['cityId'])) {
 
 	// Fetch establishment name base on city id -----------------------------
 	$query = "SELECT * FROM establishments WHERE idCity = ".$_POST['cityId'];
-	$result = $mysqli->query($query);
+	$result = $conn->query($query);
 
 	if ($result->num_rows > 0) {
 		echo '<option value="">Selectionnez un établissement</option>';
@@ -20,7 +20,7 @@ if (isset($_POST['cityId']) && !empty($_POST['cityId'])) {
 
 	// Fetch professionnal name base on establishment id ---------------------
 	$query = "SELECT * FROM professionnals WHERE idEstablishment = ".$_POST['establishmentId'];
-	$result = $mysqli->query($query);
+	$result = $conn->query($query);
 
 	if ($result->num_rows > 0) {
 		echo '<option value="">Selectionnez un professionnel</option>';

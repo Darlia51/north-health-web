@@ -20,7 +20,7 @@ if(isset($_POST['options'])){
 }
 
 // Préparer la requête d'insertion
-$stmt = $mysqli->prepare("INSERT INTO Appointments (idConsultationType, idCity, idEstablishment, idProfessionnal, appointmentDate, idAppointmentsTimeSlots, idHospitalizationOptions, insuranceNumber) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+$stmt = $conn->prepare("INSERT INTO Appointments (idConsultationType, idCity, idEstablishment, idProfessionnal, appointmentDate, idAppointmentsTimeSlots, idHospitalizationOptions, insuranceNumber) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
 
 // Liage des paramètres
 $stmt->bind_param("iiiisisi", $consultationType, $city, $establishment, $professionnal, $appointmentDate, $appointmentsTimeSlots, $idHospitalizationOptions, $insuranceNumber);
@@ -34,5 +34,5 @@ $stmt->bind_param("iiiisisi", $consultationType, $city, $establishment, $profess
 	}
 
 // Fermer la connexion
-$mysqli->close();
+$conn->close();
 ?>

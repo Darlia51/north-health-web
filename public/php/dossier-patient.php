@@ -88,7 +88,7 @@
 
 			// Requête pour récupérer les informations de l'utilisateur
 			$sql = "SELECT * FROM Patients WHERE insuranceNumber=$insuranceNumber";
-			$result = mysqli_query($mysqli, $sql);
+			$result = mysqli_query($conn, $sql);
 
 			// Récupération des données de l'utilisateur
 			if ($result->num_rows > 0) {
@@ -186,7 +186,7 @@
 				// Requête SQL pour récupérer les données des rendez-vous de l'utilisateur
 				$sql="SELECT * FROM appointment_view WHERE insuranceNumber = '$insuranceNumber'";
 
-				$result = $mysqli->query($sql);
+				$result = $conn->query($sql);
 
 				if ($result->num_rows > 0) {
 						// Affiche le tableau

@@ -36,7 +36,7 @@ if ($insuranceNumber && $insurancePlan && $lastName && $firstName && $adress && 
 }
 
 	// Préparer la requête d'insertion
-	$stmt = $mysqli->prepare("INSERT INTO Patients (email, password, lastName, firstName, adress, city, birthDate, phoneNumber, insuranceNumber, insurancePlan, healthInsurance, 	regularDoctor) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+	$stmt = $conn->prepare("INSERT INTO Patients (email, password, lastName, firstName, adress, city, birthDate, phoneNumber, insuranceNumber, insurancePlan, healthInsurance, 	regularDoctor) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 
 	// Liage des paramètres
 	$stmt->bind_param('ssssssssssss', $email, $password, $lastName, $firstName, $adress, 	$city, $birthDate, $phoneNumber, $insuranceNumber, $insurancePlan, $healthInsurance, 	$regularDoctor);
@@ -54,6 +54,6 @@ if ($insuranceNumber && $insurancePlan && $lastName && $firstName && $adress && 
 	$stmt->close();
 
 	// Fermeture de la connexion à la base de données
-	mysqli_close($mysqli);
+	mysqli_close($conn);
 
 ?>

@@ -86,7 +86,7 @@ session_start();
 						<option value="">Sélectionnez une ville</option>
 						<?php
 						$query = "SELECT * FROM cities";
-						$result = $mysqli->query($query);
+						$result = $conn->query($query);
 						if ($result->num_rows > 0) {
 							while ($row = $result->fetch_assoc()) {
 								echo '<option value="'.$row['idCity'].'">'.$row['cityName'].'</option>';

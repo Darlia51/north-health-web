@@ -92,7 +92,7 @@
 								//Connexion bdd
 								include("../../app/connexionBdd.php");
 								$sql = "SELECT * FROM AppointmentsTimeSlots WHERE isAvailable = true";
-								$result = mysqli_query($mysqli, $sql);
+								$result = mysqli_query($conn, $sql);
 								// echo des options
 								while ($row = mysqli_fetch_array($result)) {
 									echo "<option name='appointmentsTimeSlots' value='" . $row['idAppointmentsTimeSlots'] . "'>" . " (" . $row['startTime'] . " - " . $row['endTime'] . ")</option>";
