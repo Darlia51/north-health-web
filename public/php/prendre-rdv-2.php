@@ -85,7 +85,7 @@ session_start();
 					<select class="form-control" name="city" id="city" style="width:105%;" required>
 						<option value="">Sélectionnez une ville</option>
 						<?php
-						$query = "SELECT * FROM cities";
+						$query = "SELECT * FROM Cities";
 						$result = $conn->query($query);
 						if ($result->num_rows > 0) {
 							while ($row = $result->fetch_assoc()) {
