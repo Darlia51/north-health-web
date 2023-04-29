@@ -13,7 +13,7 @@ $insuranceNumber = $_POST['insuranceNumber'];
 $password = $_POST['password'];
 
 // Vérifier si l'utilisateur existe dans la base de données
-$result = mysqli_query($conn, "SELECT * FROM patients WHERE insuranceNumber = '$insuranceNumber' AND password = '$password'");
+$result = mysqli_query($conn, "SELECT * FROM Patients WHERE insuranceNumber = '$insuranceNumber' AND password = '$password'");
 if (mysqli_num_rows($result) === 1) {
 
     // L'utilisateur existe, stocker ses informations de session
