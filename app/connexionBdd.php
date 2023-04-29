@@ -11,8 +11,4 @@ $mysqliConnected = $conn->real_connect($host, $user, $password, $database, NULL,
 if (!$mysqliConnected) {
   die("Connect Error: " . $conn->connect_error());
 }
-
-// Fermeture de la connexion
-$conn->close();
-
 ?>
