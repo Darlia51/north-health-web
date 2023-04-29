@@ -5,7 +5,7 @@ $user = getenv('STACKHERO_MYSQL_USER');
 $password = getenv('STACKHERO_MYSQL_ROOT_PASSWORD');
 $database = getenv('STACKHERO_MYSQL_DATABASE');
 
-$conn = new mysqli($host, $user, $password, $database);
+$conn = new mysqli($host, $user, $password, $database, MYSQLI_CLIENT_SSL);
 
 // Vérification de la connexion
 if (!$conn) {
