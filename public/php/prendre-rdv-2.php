@@ -100,7 +100,7 @@ session_start();
 				<!-- Choix de l'établissement -->
 				<div class="form-etablissement">
 					<label for="city">Établissement :</label>
-					<select class="form-control" name="establishment" id="establishment" style="width:105%;" required>
+					<select class="form-control" name="establishment" id="establishment" style="width:105%;" required disabled>
 						<option value="">Selectionnez un établissement</option>
 					</select>
 				</div>
@@ -108,7 +108,7 @@ session_start();
 				<!-- Choix du professionnel -->
 				<div class="form-professionnel">
 					<label for="city">Professionnel :</label>
-					<select class="form-control" name="professionnal" id="professionnal" style="width:105%;" required>
+					<select class="form-control" name="professionnal" id="professionnal" style="width:105%;" required disabled>
 						<option value="">Selectionnez un professionnel</option>
 					</select>
 				</div>
