@@ -12,9 +12,7 @@ if (!$mysqliConnected) {
   die("Connect Error: " . $conn->connect_error());
 }
 
-echo "Connexion réussie" . $conn->host_info . "\n";
-
 // Fermeture de la connexion
-
+$conn->close();
 
 ?>
