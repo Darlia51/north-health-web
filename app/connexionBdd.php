@@ -6,9 +6,9 @@ $password = parse_url(getenv('STACKHERO_MYSQL_ROOT_PASSWORD'));
 $database = parse_url(getenv('STACKHERO_MYSQL_DATABASE'));
 
 $conn = mysqli_init();
-$mysqliConnected = $mysqli->real_connect($hostname, $user, $password, $database, NULL, NULL, MYSQLI_CLIENT_SSL);
+$mysqliConnected = $conn->real_connect($hostname, $user, $password, $database, NULL, NULL, MYSQLI_CLIENT_SSL);
 if (!$mysqliConnected) {
-  die("Connect Error: " . $mysqli->connect_error());
+  die("Connect Error: " . $conn->connect_error());
 }
 
 // Vérification de la connexion
