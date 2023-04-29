@@ -5,7 +5,7 @@ include("./connexionBdd.php");
 if (isset($_POST['cityId']) && !empty($_POST['cityId'])) {
 
 	// Fetch establishment name base on city id -----------------------------
-	$query = "SELECT * FROM establishments WHERE idCity = ".$_POST['cityId'];
+	$query = "SELECT * FROM Establishments WHERE idCity = ".$_POST['cityId'];
 	$result = $conn->query($query);
 
 	if ($result->num_rows > 0) {
@@ -19,7 +19,7 @@ if (isset($_POST['cityId']) && !empty($_POST['cityId'])) {
 } elseif(isset($_POST['establishmentId']) && !empty($_POST['establishmentId'])) {
 
 	// Fetch professionnal name base on establishment id ---------------------
-	$query = "SELECT * FROM professionnals WHERE idEstablishment = ".$_POST['establishmentId'];
+	$query = "SELECT * FROM Professionnals WHERE idEstablishment = ".$_POST['establishmentId'];
 	$result = $conn->query($query);
 
 	if ($result->num_rows > 0) {
