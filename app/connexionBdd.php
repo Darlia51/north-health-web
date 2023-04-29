@@ -1,6 +1,6 @@
 <?php
 
-$hostname = parse_url(getenv('STACKHERO_MYSQL_HOST'));
+$host = parse_url(getenv('STACKHERO_MYSQL_HOST'));
 $user = getenv('STACKHERO_MYSQL_USER');
 $password = getenv('STACKHERO_MYSQL_ROOT_PASSWORD');
 $database = getenv('STACKHERO_MYSQL_DATABASE');
