@@ -156,9 +156,9 @@ session_start();
 
 	<!--Activation des menus désactivés suite à une sélection-->
 	<script>
-	   const citySelect = document.getElementById('city_id');
-	   const etablissementSelect = document.getElementById('etablissement_id');
-	   const prosSelect = document.getElementById('professionnal_id');
+	   const citySelect = document.getElementById('city');
+	   const etablissementSelect = document.getElementById('etablissement');
+	   const prosSelect = document.getElementById('professionnal');
 	   citySelect.addEventListener('change', () => {
 	      etablissementSelect.removeAttribute('disabled');
 	   });
