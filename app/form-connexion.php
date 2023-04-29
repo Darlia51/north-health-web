@@ -1,9 +1,12 @@
 <?php
 // Démarrer la session
-session_start();
+
 
 // Inclure le fichier de connexion à la base de données
-include ("./connexionBdd.php");
+include ("connexionBdd.php");
+
+
+session_start();
 
 // Récupérer les valeurs des champs de formulaire
 $insuranceNumber = $_POST['insuranceNumber'];
