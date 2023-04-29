@@ -100,7 +100,7 @@ session_start();
 				<!-- Choix de l'établissement -->
 				<div class="form-etablissement">
 					<label for="city">Établissement :</label>
-					<select class="form-control" name="establishment" id="establishment" style="width:105%;" required disabled>
+					<select class="form-control" name="establishment" id="establishment" style="width:105%;" required>
 						<option value="">Selectionnez un établissement</option>
 					</select>
 				</div>
@@ -108,7 +108,7 @@ session_start();
 				<!-- Choix du professionnel -->
 				<div class="form-professionnel">
 					<label for="city">Professionnel :</label>
-					<select class="form-control" name="professionnal" id="professionnal" style="width:105%;" required disabled>
+					<select class="form-control" name="professionnal" id="professionnal" style="width:105%;" required>
 						<option value="">Selectionnez un professionnel</option>
 					</select>
 				</div>
@@ -157,7 +157,7 @@ session_start();
 	<script>
 		$(document).ready(function() {
 		  // Désactiver le champ "Etablissement" et "Professionnel"
-		  $("#etablishment").prop("disabled", true);
+		  $("#establishment").prop("disabled", true);
 		  $("#professionnal").prop("disabled", true);
 
 		  // Lorsqu'une ville est sélectionnée
@@ -168,16 +168,16 @@ session_start();
 		    // Si une ville est sélectionnée
 		    if (ville != "") {
 		      // Activer le champ "Etablissement"
-		      $("#etablishment").prop("disabled", false);
+		      $("#establishment").prop("disabled", false);
 		    } else {
 		      // Sinon, désactiver le champ "Etablissement" et "Professionnel"
-		      $("#etablishment").prop("disabled", true);
+		      $("#establishment").prop("disabled", true);
 		      $("#professionnal").prop("disabled", true);
 		    }
 		  });
 
 		  // Lorsqu'un établissement est sélectionné
-		  $("#etablishment").change(function() {
+		  $("#establishment").change(function() {
 		    // Récupérer la valeur sélectionnée
 		    var etablissement = $(this).val();
 
