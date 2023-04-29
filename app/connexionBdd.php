@@ -9,6 +9,7 @@ $conn = mysqli_init();
 $mysqliConnected = $mysqli->real_connect($hostname, $user, $password, $database, NULL, NULL, MYSQLI_CLIENT_SSL);
 if (!$mysqliConnected) {
   die("Connect Error: " . $mysqli->connect_error());
+}
 
 // Vérification de la connexion
 if (!$conn) {
