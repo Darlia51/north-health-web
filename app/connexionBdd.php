@@ -1,9 +1,9 @@
 <?php
 
 $hostname = parse_url(getenv('STACKHERO_MYSQL_HOST'));
-$user = parse_url(getenv('STACKHERO_MYSQL_USER'));
-$password = parse_url(getenv('STACKHERO_MYSQL_ROOT_PASSWORD'));
-$database = parse_url(getenv('STACKHERO_MYSQL_DATABASE'));
+$user = getenv('STACKHERO_MYSQL_USER');
+$password = getenv('STACKHERO_MYSQL_ROOT_PASSWORD');
+$database = getenv('STACKHERO_MYSQL_DATABASE');
 
 $conn = new mysqli($host, $user, $password, $database);
 
