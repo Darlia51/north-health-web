@@ -100,7 +100,7 @@ session_start();
 				<!-- Choix de l'établissement -->
 				<div class="form-etablissement">
 					<label for="city">Établissement :</label>
-					<select class="form-control" name="establishment" id="establishment" style="width:105%;" required disabled>
+					<select class="form-control" name="establishment" id="establishment" style="width:105%;" required>
 						<option value="">Selectionnez un établissement</option>
 					</select>
 				</div>
@@ -108,7 +108,7 @@ session_start();
 				<!-- Choix du professionnel -->
 				<div class="form-professionnel">
 					<label for="city">Professionnel :</label>
-					<select class="form-control" name="professionnal" id="professionnal" style="width:105%;" required disabled>
+					<select class="form-control" name="professionnal" id="professionnal" style="width:105%;" required>
 						<option value="">Selectionnez un professionnel</option>
 					</select>
 				</div>
@@ -153,20 +153,6 @@ session_start();
     });
   });
 	</script>
-
-	<!--Activation des menus désactivés suite à une sélection-->
-	<script>
-	   const citySelect = document.getElementById('city');
-	   const etablissementSelect = document.getElementById('etablissement');
-	   const prosSelect = document.getElementById('professionnal');
-	   citySelect.addEventListener('change', () => {
-	      etablissementSelect.removeAttribute('disabled');
-	   });
-	   etablissementSelect.addEventListener('change', () => {
-	      prosSelect.removeAttribute('disabled');
-	   });
-	</script>
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 
 </body>
