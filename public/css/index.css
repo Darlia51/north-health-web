@@ -28,15 +28,15 @@ div{
 	gap:50px;
 }
 
-div a.lien {
-	text-decoration: none;
-	color:white;
-	font-weight: 500;
+button{
+	border:none;
+	background-color: transparent;
+	font-weight:500;
+
 }
 
-div a.lien:hover{
-	transition:0.5s;
-	color: #35675f;
+div a{
+	font-size:17px;
 }
 
 header h1{
@@ -53,4 +53,3 @@ header h2{
 	padding-top: 5%;
 	font-weight:400;
 }
-
