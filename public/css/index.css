@@ -28,13 +28,13 @@ div{
 	gap:50px;
 }
 
-div a{
+.lien {
 	text-decoration: none;
 	color:white;
 	font-weight: 500;
 }
 
-div a:hover{
+.lien:hover{
 	transition:0.5s;
 	color: #35675f;
 }
