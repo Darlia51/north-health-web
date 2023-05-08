@@ -19,8 +19,8 @@
 		</header>
 		
 		<div>
-			<a href="public/php/connexion.php">CONNEXION</a>
-			<a href="public/html/inscription1.html">INSCRIPTION</a>
+			<a class="lien" href="public/php/connexion.php">CONNEXION</a>
+			<a class="lien" href="public/html/inscription1.html">INSCRIPTION</a>
 		</div>
 	</main>
 
