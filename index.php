@@ -10,7 +10,7 @@
 </head>
 
 <body>
-	<img src="fichiers/images/fond-accueil.jpg">
+	<img src="assets/images/fond-accueil.jpg">
 
 	<main>
 		<header>
@@ -19,8 +19,9 @@
 		</header>
 		
 		<div>
-			<a class="lien" href="public/php/connexion.php" style="color:white; font-weight:500; text-decoration:none;">CONNEXION</a>
-			<a class="lien" href="public/html/inscription1.html" style="color:white; font-weight:500; text-decoration:none;">INSCRIPTION</a>
+			<a href="public/php/connexion.php">
+				<button>CONNEXION</button></a>
+			<a href="public/html/inscription1.html"><button>INSCRIPTION</button></a>
 		</div>
 	</main>
 
