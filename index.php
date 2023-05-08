@@ -19,10 +19,8 @@
 		</header>
 		
 		<div>
-			<a href="public/php/connexion.php">
-				<button>CONNEXION</button></a>
-			<a href="public/html/inscription1.html">
-				<button>INSCRIPTION</button></a>
+			<a href="public/php/connexion.php">CONNEXION</a>
+			<a href="public/html/inscription1.html">INSCRIPTION</a>
 		</div>
 	</main>
 
