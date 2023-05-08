@@ -19,8 +19,8 @@
 		</header>
 		
 		<div>
-			<a class="lien" href="public/php/connexion.php">CONNEXION</a>
-			<a class="lien" href="public/html/inscription1.html">INSCRIPTION</a>
+			<a class="lien" href="public/php/connexion.php" style="color:white; font-weight:500; text-decoration:none;">CONNEXION</a>
+			<a class="lien" href="public/html/inscription1.html" style="color:white; font-weight:500; text-decoration:none;">INSCRIPTION</a>
 		</div>
 	</main>
 
