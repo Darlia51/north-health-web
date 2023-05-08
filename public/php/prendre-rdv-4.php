@@ -25,7 +25,7 @@
 	<!--MENU DE NAVIGATION-->
 	<header>
 		<nav class="navbar navbar-expand-lg">
-				<img class="logo" src="../../assets/images/logo-northhealth.png">
+				<img class="logo" src="../../fichiers/images/logo-northhealth.png">
 
 			<div class="container-fluid" style="justify-content:end;">
 				<ul class="navbar-nav">
@@ -78,7 +78,7 @@
 		<div class="groupe-infosComp4bis">
 			<h3 class="h3-prise-rdv">Dans le cas d'une hospitalisation, sélectionnez les éventuelles options souhaitées</h3>
 			
-			<form class="form-rdv-checkbox" action="../../app/form-rdv4.php" method="POST">
+			<form class="form-rdv-checkbox" action="../../config/form-rdv4.php" method="POST">
 			<div class="checkbox-etape4">
 				<input type="checkbox" name="options" value="1">
 				<label for="HospitalizationOptions">Chambre privative calme</label>

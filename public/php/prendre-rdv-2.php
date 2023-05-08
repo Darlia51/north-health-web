@@ -1,6 +1,6 @@
 <?php
 // Inclure le fichier bdd
-include("../../app/connexionBdd.php");
+include("../../config/connexionBdd.php");
 
 // Reprendre la session
 session_start();
@@ -24,7 +24,7 @@ session_start();
 	<!--MENU DE NAVIGATION-->
 	<header>
 		<nav class="navbar navbar-expand-lg">
-				<img class="logo" src="../../assets/images/logo-northhealth.png">
+				<img class="logo" src="../../fichiers/images/logo-northhealth.png">
 
 			<div class="container-fluid" style="justify-content:end;">
 				<ul class="navbar-nav">
@@ -76,7 +76,7 @@ session_start();
 		<!--FORMULAIRE-->
 		<h3 class="h3-prise-rdv margin-ville">Les professionnels des cliniques et laboratoires North Health proposent de vous accueillir dans diverses villes de France.</h3>
 		<div class="groupe" style="margin-top:50px;">
-			<form class="form-etape-2" action="../../app/form-rdv2.php" method="POST"
+			<form class="form-etape-2" action="../../config/form-rdv2.php" method="POST"
 			style="display:flex; column-gap:100px; justify-content: center;">
 
 				<!-- Choix de la ville -->
@@ -127,7 +127,7 @@ session_start();
     $("#city").on("change",function(){
       var cityId = $(this).val();
       $.ajax({
-        url :"../../app/dependance-ajax.php",
+        url :"../../config/dependance-ajax.php",
         type:"POST",
         cache:false,
         data:{cityId:cityId},
@@ -142,7 +142,7 @@ session_start();
     $("#establishment").on("change", function(){
       var establishmentId = $(this).val();
       $.ajax({
-        url :"../../app/dependance-ajax.php",
+        url :"../../config/dependance-ajax.php",
         type:"POST",
         cache:false,
         data:{establishmentId:establishmentId},
@@ -153,46 +153,20 @@ session_start();
     });
   });
 	</script>
-	
+
+	<!--Activation des menus désactivés suite à une sélection-->
 	<script>
-		$(document).ready(function() {
-		  // Désactiver le champ "Etablissement" et "Professionnel"
-		  $("#establishment").prop("disabled", true);
-		  $("#professionnal").prop("disabled", true);
-
-		  // Lorsqu'une ville est sélectionnée
-		  $("#city").change(function() {
-		    // Récupérer la valeur sélectionnée
-		    var ville = $(this).val();
-
-		    // Si une ville est sélectionnée
-		    if (ville != "") {
-		      // Activer le champ "Etablissement"
-		      $("#establishment").prop("disabled", false);
-		    } else {
-		      // Sinon, désactiver le champ "Etablissement" et "Professionnel"
-		      $("#establishment").prop("disabled", true);
-		      $("#professionnal").prop("disabled", true);
-		    }
-		  });
-
-		  // Lorsqu'un établissement est sélectionné
-		  $("#establishment").change(function() {
-		    // Récupérer la valeur sélectionnée
-		    var etablissement = $(this).val();
-
-		    // Si un établissement est sélectionné
-		    if (etablissement != "") {
-		      // Activer le champ "Professionnel"
-		      $("#professionnal").prop("disabled", false);
-		    } else {
-		      // Sinon, désactiver le champ "Professionnel"
-		      $("#professionnal").prop("disabled", true);
-		    }
-		  });
-		});
-
+   const citySelect = document.getElementById('city_id');
+   const etablissementSelect = document.getElementById('etablissement_id');
+   const prosSelect = document.getElementById('professionnal_id');
+   citySelect.addEventListener('change', () => {
+      etablissementSelect.removeAttribute('disabled');
+   });
+   etablissementSelect.addEventListener('change', () => {
+      prosSelect.removeAttribute('disabled');
+   });
 	</script>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 
 </body>

@@ -20,14 +20,14 @@
 	<header>
 		<nav>
 			<a href="../../index.php">
-				<img class="logo" src="../../assets/images/logo-northhealth.png">
+				<img class="logo" src="../../fichiers/images/logo-northhealth.png">
 			</a>
 		</nav>
 	</header>
 
 
 	<h1>Connexion</h1>
-	<form action="../../app/form-connexion.php" method="POST">
+	<form action="../../config/form-connexion.php" method="POST">
 		<div>
 			<label for="insuranceNumber">Numéro de sécurité sociale :</label><br>
 			<input type="text" id="insuranceNumber" name="insuranceNumber" required pattern="[0-9]{15}"><br>

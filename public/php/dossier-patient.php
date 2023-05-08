@@ -6,7 +6,7 @@
 	$insuranceNumber = $_SESSION['insuranceNumber'];
 
 	// Inclure le fichier de connexion à la base de données
-	include ("../../app/connexionBdd.php");?>
+	include ("../../config/connexionBdd.php");?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -32,7 +32,7 @@
 	<!--MENU DE NAVIGATION-->
 	<header>
 		<nav class="navbar navbar-expand-lg">
-				<img class="logo" src="../../assets/images/logo-northhealth.png">
+				<img class="logo" src="../../fichiers/images/logo-northhealth.png">
 				
 			<div class="container-fluid" style="justify-content:end;">
 				<ul class="navbar-nav">

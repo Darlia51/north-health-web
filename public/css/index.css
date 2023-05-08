@@ -32,7 +32,11 @@ button{
 	border:none;
 	background-color: transparent;
 	font-weight:500;
+}
 
+button:hover{
+	transition:0.5s;
+	color: #35675f;
 }
 
 div a{

@@ -23,7 +23,7 @@
 	<!--MENU DE NAVIGATION-->
 	<header>
 		<nav class="navbar navbar-expand-lg">
-				<img class="logo" src="../../assets/images/logo-northhealth.png">
+				<img class="logo" src="../../fichiers/images/logo-northhealth.png">
 
 			<div class="container-fluid" style="justify-content:end;">
 				<ul class="navbar-nav">
@@ -77,11 +77,11 @@
 		<div class="groupe-interventions">
 			<h3 class="h3-prise-rdv">Choisissez votre motif de consultation</h3>
 
-			<form class="form-rdv-radio" action="../../app/form-rdv1.php" method="POST">
+			<form class="form-rdv-radio" action="../../config/form-rdv1.php" method="POST">
 				
 				<?php
 					// Connexion bdd
-					include("../../app/connexionBdd.php");
+					include("../../config/connexionBdd.php");
 
 					$sql = "SELECT * FROM ConsultationType";
 					$result = mysqli_query($conn, $sql);

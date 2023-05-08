@@ -21,7 +21,7 @@
 	<!--MENU DE NAVIGATION-->
 	<header>
 		<nav class="navbar navbar-expand-lg">
-				<img class="logo" src="../../assets/images/logo-northhealth.png">
+				<img class="logo" src="../../fichiers/images/logo-northhealth.png">
 
 			<div class="container-fluid" style="justify-content:end;">
 				<ul class="navbar-nav">
@@ -73,7 +73,7 @@
 		<!--HEURE DU RDV-->
 		<h3 class="h3-prise-rdv">Veuillez choisir une date et une heure.</h3>
 		<div class="groupe-rdv3">
-			<form action="../../app/form-rdv3.php" method="POST" class="form-rdv-3">
+			<form action="../../config/form-rdv3.php" method="POST" class="form-rdv-3">
 				<!--Date-->
 				<div class="rdv3">
 					<label for="appointmentDate" class="label-etape3 date">Date de votre rendez-vous</label>
@@ -90,7 +90,7 @@
 							<option name="appointmentsTimeSlots" value="">Choisissez un créneau horaire</option>
 							<?php
 								//Connexion bdd
-								include("../../app/connexionBdd.php");
+								include("../../config/connexionBdd.php");
 								$sql = "SELECT * FROM AppointmentsTimeSlots WHERE isAvailable = true";
 								$result = mysqli_query($conn, $sql);
 								// echo des options
