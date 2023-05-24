@@ -10,7 +10,7 @@
 </head>
 
 <body>
-	<img src="assets/images/fond-accueil.jpg">
+	<img src="fichiers/images/fond-accueil.jpg">
 
 	<main>
 		<header>
