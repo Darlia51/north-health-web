@@ -2,10 +2,10 @@
 // Include the database connection file
 include("./connexionBdd.php");
 
-if (isset($_POST['city']) && !empty($_POST['city'])) {
+if (isset($_POST['cityId']) && !empty($_POST['cityId'])) {
 
 	// Fetch establishment name base on city id -----------------------------
-	$query = "SELECT * FROM establishments WHERE idCity = ".$_POST['city'];
+	$query = "SELECT * FROM establishments WHERE idCity = ".$_POST['cityId'];
 	$result = $conn->query($query);
 
 	if ($result->num_rows > 0) {
