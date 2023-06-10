@@ -155,7 +155,7 @@ session_start();
 	</script>
 
 	<!--Activation des menus désactivés suite à une sélection-->
-	<script>
+	<!--<script>
    const citySelect = document.getElementById('city_id');
    const etablissementSelect = document.getElementById('etablissement_id');
    const prosSelect = document.getElementById('professionnal_id');
@@ -165,7 +165,7 @@ session_start();
    etablissementSelect.addEventListener('change', () => {
       prosSelect.removeAttribute('disabled');
    });
-	</script>
+	</script>-->
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 
