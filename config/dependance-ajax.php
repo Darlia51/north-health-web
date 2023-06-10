@@ -16,10 +16,10 @@ if (isset($_POST['cityId']) && !empty($_POST['cityId'])) {
 	} else {
 		echo '<option value="">Establishment non disponible</option>';
 	}
-} elseif(isset($_POST['establishment']) && !empty($_POST['establishment'])) {
+} elseif(isset($_POST['establishmentId']) && !empty($_POST['establishmentId'])) {
 
 	// Fetch professionnal name base on establishment id ---------------------
-	$query = "SELECT * FROM professionnals WHERE idEstablishment = ".$_POST['establishment'];
+	$query = "SELECT * FROM professionnals WHERE idEstablishment = ".$_POST['establishmentId'];
 	$result = $conn->query($query);
 
 	if ($result->num_rows > 0) {
