@@ -67,27 +67,34 @@
 	<main>
 		<h1>Rendez-vous des professionnels</h1>
     
-    <div>
-        <p>Choisissez le nom d'un professionnel afin d'afficher la liste de ses rendez-vous actuels, sur une période choisie.</p>
-        <form action="../../config/liste-rdv.php" method="POST">
-            <label for="city">Professionnel :</label>
-                <select class="form-control" name="professionnal" id="professionnal" style="width:105%;" required>
-                    <option value="">Selectionnez un professionnel</option>
-                    <?php
-                    $sql = "SELECT lastName, firstName FROM Professionnals";
-                    $result = mysqli_query($conn, $sql);    
+        <div>
+            <p>Choisissez le nom d'un professionnel afin d'afficher la liste de ses rendez-vous actuels, sur une période choisie.</p>
+            <form action="../../config/liste-rdv.php" method="POST">
+                <label for="city">Professionnel :</label>
+                    <select class="form-control" name="professionnal" id="professionnal" style="width:105%;" required>
+                        <option value="">Selectionnez un professionnel</option>
+                        <?php
+                        $sql = "SELECT lastName, firstName FROM Professionnals";
+                        $result = mysqli_query($conn, $sql);    
 
-                    if ($result->num_rows > 0){
-                        echo 'Dr ' . $row['lastName'] . ' ' . $row['firstName'];
-                    }
-                    ?>
-                </select>
-        </form>
-    </div>
-
-
+                        if ($result->num_rows > 0){
+                            echo 'Dr ' . $row['lastName'] . ' ' . $row['firstName'];
+                        }
+                        ?>
+                    </select>
+            </form>
+        </div>
 
 
+        <div>
+            <form action="../../config/form-rdv3.php" method="POST" class="form-rdv-3">
+				<!--Date-->
+				<div class="rdv3">
+					<label for="appointmentDate" class="label-etape3 date">Du : </label>
+						<input type="date" name="appointmentDate" value="appointmentDate" id="date" class="form-control">
+                    <label for="appointmentDate" class="label-etape3 date">Au : </label>
+					<input type="date" name="appointmentDate" value="appointmentDate" id="date" class="form-control">
+        </div>
         <?php
             $sql = "SELECT * FROM appointment_view WHERE idProfessionnal = $idProfessionnal BEETWEE$dateStart AND $dateEnd";
             $result = mysqli_query($conn, $sql);       
