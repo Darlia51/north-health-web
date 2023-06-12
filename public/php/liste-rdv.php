@@ -78,7 +78,9 @@
                         $result = mysqli_query($conn, $sql);    
 
                         if ($result->num_rows > 0){
-                            echo 'Dr ' . $row['lastName'] . ' ' . $row['firstName'];
+                            while ($row = $result->fetch_assoc()) {
+                                echo '<option value="'.$row['lastName'].'">'.$row['firstName']. '</option>';
+                            }
                         }
                         ?>
                     </select>
