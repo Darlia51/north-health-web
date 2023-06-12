@@ -1,3 +1,8 @@
+<?php
+//Connexion bdd
+        include("../../config/connexionBdd.php");
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -60,8 +65,51 @@
 
 
 	<main>
-		<h1>Dossier patient</h1>
+		<h1>Rendez-vous des professionnels</h1>
     </main>
+
+    <form action="../../config/liste-rdv.php" method="POST">
+        <label for="city">Professionnel :</label>
+			<select class="form-control" name="professionnal" id="professionnal" style="width:105%;" required>
+				<option value="">Selectionnez un professionnel</option>
+                <?php
+                    $sql = "SELECT * FROM appointment_view WHERE idProfessionnal = $idProfessionnal BEETWEEN $dateStart AND $dateEnd";
+                    $result = mysqli_query($conn, $sql);       
+                    
+                    if ($result->num_rows > 0) {
+                        // Affiche le tableau
+                        echo '<table class="table">';
+                        echo '<thead>';
+                        echo '<tr>';
+                        echo '<th>Date</th>';
+                        echo '<th>Heure</th>';
+                        echo '<th>Type de consultation</th>';
+                        echo '<th>Professionnel</th>';
+                        echo '<th>Établissement</th>';
+                        echo '<th>Ville</th>';
+                        echo '</tr>';
+                        echo '</thead>';
+                        echo '<tbody>';
+
+                        // Parcourt les résultats de la requête et affiche chaque rendez-vous sous forme de ligne dans le tableau
+                        while($row = $result->fetch_assoc()) {
+                                echo '<tr>';
+                                echo '<td>' . $row['appointmentDate'] .'</td>';
+                                echo '<td>' . $row['timeSlot'] .'</td>';
+                                echo '<td>' . $row['consultationType'] . '</td>';
+                                echo '<td>' . $row['fullName'] . '</td>';
+                                echo '<td>' . $row['establishmentName'] . '</td>';
+                                echo '<td>' . $row['cityName'] . '</td>';
+                                echo '</tr>';
+                        } 
+                        else {
+                            echo "Aucun rendez-vous n'a été trouvé pour cet utilisateur.";
+                    }
+                ?>
+			</select>
+
+
+
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </body>

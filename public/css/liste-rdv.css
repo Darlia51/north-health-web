@@ -3,3 +3,40 @@ body h1{
 	text-align:center;
 	padding: 3%;
 }
+
+.table {
+	border-collapse: collapse;
+	width: 100%;
+	border-bottom: 1px solid black;
+}
+
+.table th, .table td {
+	text-align: left;
+	padding: 8px;
+	border-right:1px solid black;
+}
+
+.table tr:nth-child(even){background-color: #eeeeeeb5}
+
+.table th {
+	color: rgb(0, 0, 0);
+}
+
+.table thead{
+	background-color: #eeeeeeb5;
+	border-top : 1px solid black;
+	border-left : 1px solid black;
+	border-right: 1px solid black;
+}
+
+tbody > tr{
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+}
+
+
+
+.tab-bar-et-contenus{
+	width:70%;
+	margin:auto;
+}
