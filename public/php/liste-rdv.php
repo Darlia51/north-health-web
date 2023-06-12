@@ -96,7 +96,7 @@
 					<input type="date" name="appointmentDate" value="appointmentDate" id="date" class="form-control">
         </div>
         <?php
-            $sql = "SELECT * FROM appointment_view WHERE idProfessionnal = $idProfessionnal BEETWEE$dateStart AND $dateEnd";
+            /*$sql = "SELECT * FROM appointment_view WHERE idProfessionnal = $idProfessionnal BEETWEEN $dateStart AND $dateEnd";
             $result = mysqli_query($conn, $sql);       
             
             if ($result->num_rows > 0) {
@@ -113,8 +113,8 @@
                 echo '</tr>';
                 echo '</thead>';
                 echo '<tbody>'
-                // Parcourt les résultats de la requête et affiche chaque rendez-vous sous forme de ligndans le tableau
-                while($row = $result->fetch_assoc()) {
+                // Parcourt les résultats de la requête et affiche chaque rendez-vous 
+                while ($row = $result->fetch_assoc()) {
                         echo '<tr>';
                         echo '<td>' . $row['appointmentDate'] .'</td>';
                         echo '<td>' . $row['timeSlot'] .'</td>';
@@ -128,6 +128,7 @@
                     echo "Aucun rendez-vous n'a été trouvé pour cet utilisateur.";
                 }
             }
+            */
         ?>
 
 
