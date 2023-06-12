@@ -1,0 +1,12 @@
+{
+    "name": "ophelie/north-health-web",
+    "description": "Site de réservation de rendez-vous pour les patients. BTS SIO - Projet North Health",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Ophélie Foureur"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}

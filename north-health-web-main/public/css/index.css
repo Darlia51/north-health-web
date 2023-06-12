@@ -1,0 +1,55 @@
+img {
+	position: absolute;
+	z-index: -1;
+	height:100%;
+	width:100%;
+}
+
+header, div, button {
+	/*position: relative;
+	z-index: 1;*/
+	color:white;
+	
+}
+
+header{
+	display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+	margin-left: 5%;
+}
+
+div{
+	display: flex;
+	position: fixed;
+	bottom: 20%;
+	left:11%;
+	gap:50px;
+}
+
+button{
+	border:none;
+	background-color: transparent;
+	font-weight:500;
+
+}
+
+div a{
+	font-size:17px;
+}
+
+header h1{
+	font-size:75px;
+	text-align: center;
+	text-shadow: 2px 2px 7px #414141;
+	letter-spacing:5px;
+	margin-top: 20%;
+}
+
+header h2{
+	font-size:20px;
+	text-align:center;
+	padding-top: 5%;
+	font-weight:400;
+}
